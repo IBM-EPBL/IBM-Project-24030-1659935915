@@ -1,0 +1,116 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	background-color: black;
+}
+.contact-form {
+	position: absolute;
+	margin-top: 90px;
+	margin-left: 250px;
+            width: 300px;
+	height: 350px;
+	padding: 80px 40px;
+	background: rgba(0, 0, 0, 0.5);
+	border-style: solid;
+	border-radius: 20px;
+	border-color: #ed4828;
+	box-shadow: 0 0 8px 0 rgb(234, 13, 13);
+	}
+.avatar {
+	position: absolute;
+	width: 90px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	top: calc(-80px/2);
+	left: 150px;
+}
+.contact-form h2 {
+	margin: 0;
+	padding: 0 0 20px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+.contact-form p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: #fff;
+}
+.contact-form input {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.contact-form input[type=email], .contact-form input[type=password] {
+	border: none;
+	border-bottom: 1px solid #ed4828 ;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+.contact-form input[type=email], .contact-form input[type=password]:focus{
+	border-color: #ed4828;
+	}
+.contact-form input[type=submit] {
+	height: 30px;
+	color: #fff;
+	font-size: 15px;
+	background:#ed4828;
+	cursor: pointer;
+	border-radius: 25px;
+	border: none;
+	outline: none;
+	margin-top: 15%;
+}
+.contact-form a {
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+input[type=checkbox] {
+	width: 20%;
+}
+.contact-form input[type=submit]:hover{
+	background-color: #f4684c;
+	transition: 1s ease;
+}
+.float-container{
+	height: 700px;
+	width: 1300px;
+	margin-top: 10px;
+	border-radius: 20px;
+	display: inline;
+	}
+.float-child1{
+	float: left;
+	width: 800px;
+	height: 650PX;
+	}
+.float-child2{
+	float: right;
+	width: 700px;
+	margin-top: 10px;
+	}
+.float-child2 h1{
+	font-size: 50px;
+            text-align: center;
+            font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+@keyframes glow {
+     from {
+      color: #fff;
+    text-shadow: 0 0 10px #ed4828, 0 0 20px #ed4828, 0 0 30px #ed4828, 0 0 40px #ed4828, 0 0 50px #ed4828, 0 0 60px #ed4828, 0 0 70px #ed4828, 0 0 90px #ed4828;
+  }
+    to {
+     color: gray;
+    text-shadow: 0 0 20px #e92424, 0 0 30px #ed1e1e, 0 0 40px #ed2424, 0 0 50px #f72e2e, 0 0 60px #f02b2b, 0 0 70px #ef2a2a, 0 0 80px #f43535, 0 1 90px #ed2020;
+  }
+}

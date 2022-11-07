@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Agent Creation</title>
+	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/login.css">
+  
+</head>
+<body>
+    
+	<div class="container" >
+		<div class="row">
+			<div class="column1">
+				
+
+			</div>
+			<div class="column2">
+				<div class="contact-form">
+					<img  src="{{url_for('static',filename='a1.jpg')}}" alt="" class="avatar">
+					<h2> Agent Creation</h2>
+					<form action="/agentdata" method="POST">
+						<p>email</p><input placeholder="Enter your name" type="text" name='username'>
+			<p>Password</p><input placeholder="Enter password" type="password" name='password'> 
+			<input type="submit" value="Create">
+
+					</form>
+					<span class="alert {{indicator}}">{{a}}</span>
+				
+					<div class="links">
+						<p style="margin-top:8px;">click here for dashboard <a href="/adminpage"> Click here</a></p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
