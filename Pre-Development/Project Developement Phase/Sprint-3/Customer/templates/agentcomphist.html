@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title>Dashboard</title>
+      <link rel="stylesheet" href="../static/history.css">
+      <link rel="shortcut icon" type="image/jpg" href="../static/img3.jpg">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    </head>
+      <body>
+        
+          
+         <marquee><h2 style="font-style:italic;font-size: 40px;color: #f64f32;margin-top: 50px;">Complaint History<br></h2></marquee>
+                          
+                          
+               <table class="table" style="margin-top:150px ;">
+                <tr class="table">
+                  <th class="table">Complaint site</th>
+                  <th class="table">email id</th>
+                  <th class="table"> Registered Date</th>
+                  <th class="table">Complaint</th>
+                  <th class="table">Complaint Status</th>
+                </tr>
+                <tr class="table">
+                  <td class="table">{{ row.2 }}</td>
+                  <td class="table">{{ row.7 }}</td>
+                  <td class="table">{{ row.3 }}</td>
+                  <td class="table">{{ row.8 }}</td>
+                  <td class="table"><button  style="color:#f64f32;"id="btn" onclick= "display()">
+                    Pending</button></td>
+
+                </tr>
+               </table>     
+
+            
+            
+
+          
+        
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    let navigation=document.querySelector('.navigation');
+    let toggle=document.querySelector('.toggle');
+    toggle.onclick=function(){
+      navigation.classList.toggle('active')
+    }
+    function display(){
+      document.getElementById("btn").innerHTML="solved";
+
+    }
+
+  </script>
+      </body>
+  </html>

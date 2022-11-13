@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Complaint registration form</title>
+    <link rel="stylesheet" href="../static/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/addcomplaint.css">
+    <link rel="shortcut icon" type="image/jpg" href="../static/img3.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+    <body>
+      
+        
+        <div class="float-container">
+          <div class="float-child1">
+            
+                <form class="signup-form" action="/addcomplaint" method="post">
+
+                    <!-- form header -->
+                    <div class="form-header">
+                        <div class="form-header">
+                            <h1>Register complaints</h1>
+                          </div>
+                    </div>
+                
+                    <!-- form body -->
+                    <div class="form-body">
+                        <div class="form-body">
+
+                            <!-- Firstname and Lastname -->
+                            <div class="horizontal-group">
+                                <div class="form-group left">
+                                    <label for="firstname" class="label-title">Select Category</label>
+                                    <select name="selectcategory" required>
+                                        <option  value="category"></option>
+                                        <option  value="E-commerse">E-commerse</option>
+                                        <option  value="general">General</option>
+                                    </select>
+                                </div>
+                                <div class="form-group right">
+                                    <label for="lastname" class="label-title">Date</label>
+                                    <input type="date" name="dt"> 
+                                </div>
+                            </div>
+                            <!-- Email -->
+<div class="form-group">
+    <label for="email" class="label-title">Email*</label>
+    <input type="email" id="email"name="email" class="form-input" placeholder="enter your email" required="required">
+  </div>
+  
+  <!-- Password and confirm password -->
+  <div class="horizontal-group">
+  
+    <div class="form-group left">
+      <label for="password" class="label-title">Phone number*</label>
+      <input  id="password" class="form-input" placeholder="enter your phone number" name="phone" required="required">
+    </div>
+  
+    <div class="form-group right">
+      <label for="confirm-password" class="label-title">additional *</label>
+      <input  class="form-input" id="confirm-password" placeholder="enter your opinion" name="additional" required="required">
+    </div>
+    <!-- Gender and Hobbies -->
+<div class="horizontal-group">
+
+    <div class="form-group left">
+        <label class="label-title">Status:</label>
+        <div class="input-group">
+            <label for="male">
+                <input type="radio" name="status" value="male" id="male"> pending</label>
+            <label for="female">
+                <input type="radio" name="status" value="female" id="female">solved</label>
+        </div>
+    </div>
+
+    
+    
+</div>
+ <!-- Source of Income and Income Amount -->
+ <div class="horizontal-group">
+
+    <div class="form-group left" >
+      <label class="label-title">State</label>
+      <select class="form-input" name="state"id="level" >
+        <option value="Tamil nadu">Tamil nadu</option>
+        <option value="Kerala">Kerala</option>
+        <option value="others">others</option>
+      </select>
+    </div>
+    
+    
+  
+  </div>
+  <!-- Bio -->
+<div class="form-group">
+    <label for="choose-file" class="label-title">complaint</label>
+    <textarea class="form-input"name="complaint" rows="4" cols="50" style="height:auto"></textarea>
+  </div>
+
+
+  
+  </div>
+                    </div>
+                    
+                    <!-- form footer -->
+                    <div class="form-footer">
+                        <!-- form footer -->
+<div class="form-footer">
+    <span>* required</span>
+    
+    <button type="submit" onclick=display() class="btn">Create</button>
+  </div>
+                    </div>
+                
+                </form>
+            
+            </div>
+            
+            
+
+
+          </div>
+          
+          
+
+        </div>
+      
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!-- Script for range input label -->
+<script>
+    var rangeLabel = document.getElementById("range-label");
+    var experience = document.getElementById("experience");
+    function change() {
+    rangeLabel.innerText = experience.value + "%pending";
+    }
+  </script>
+<script>
+  let navigation=document.querySelector('.navigation');
+  let toggle=document.querySelector('.toggle');
+  toggle.onclick=function(){
+    navigation.classList.toggle('active')
+  }
+  function display(){
+    alert("you successfully registered the complaints")
+  }
+  
+</script>
+    </body>
+</html>

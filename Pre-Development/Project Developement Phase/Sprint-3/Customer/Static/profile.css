@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:wght@300;400;500;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu',sans-serif;
+}
+body {
+  min-height: 100vh;
+  background:black;
+}
+.navigation{
+  position: fixed;
+  inset: 20px;
+  background: #ed4828;
+  width:80px;
+  
+  border-left: 10px solid #ed4828;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 15px 15px 25px rgba(0,0,0,.05);
+  transition: 0.5s;
+}
+.navigation.active{
+  width: 300px;
+  border-radius: 20px;
+
+}
+.toggle{
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 50px;
+  height:50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.15);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle::before{
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 3px;
+  border-radius: 3px;
+  background: #ed4828;
+  transform: translateY(-5px);
+  transition: 1s;
+}
+.toggle::after{
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 3px;
+  border-radius: 3px;
+  background: #ed4828;
+  transform: translateY(5px);
+  transition: 1s;
+}
+.navigation.active .toggle::before{
+  transform:translateY(0px) rotate(-405deg);
+}
+.navigation.active .toggle::after{
+  transform:translateY(0px) rotate(255deg);
+}
+.navigation ul{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+}
+.navigation ul li{
+  position: relative;
+  list-style:none ;
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  /*background:#fff;*/
+}
+.navigation ul li:hover{
+  background: #fff;
+  color: #222;
+}
+.navigation ul li:nth-child(1){
+  top:20px;
+  margin-bottom: 40px;
+  background: none;
+}
+.navigation ul li:not(:first-child):hover::before{
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width:20px;
+  height:20px;
+  background: transparent;
+  border-bottom-right-radius: 20px;
+  box-shadow: 7.5px 7.5px 0 7.5px #fff;
+}
+.navigation ul li:not(:first-child):hover::after{
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  width:20px;
+  height:20px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 7.5px -7.5px 0 7.5px #fff;
+}
+
+
+.navigation ul li a{
+  position: relative;
+  display: block;
+  width:100%;
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+}
+.navigation ul li:hover:not(:first-child) a {
+  color: #ed4828;
+}
+
+.navigation ul li a .icon{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon{
+  font-size: 1.75em;
+}
+.navigation ul li a .title{
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+.float-container{
+	height: 700px;
+	width: 1000px;
+	display: inline;
+  margin-top: 100px;
+  margin-left: 400px;
+ 
+	
+}
+
+.float-child2{
+  float: left;
+  margin-left: 600px;
+  width: 250px;
+ margin-top: 250px;
+}
+.float-child2 h1{
+	font-size: 50px;
+  text-align: center;
+   font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+     from {
+      color: #fff;
+    text-shadow: 0 0 10px #ed4828, 0 0 20px #ed4828, 0 0 30px #ed4828, 0 0 40px #ed4828, 0 0 50px #ed4828, 0 0 60px #ed4828, 0 0 70px #ed4828, 0 0 90px #ed4828;
+  }
+  
+  to {
+     color: gray;
+    text-shadow: 0 0 20px #e92424, 0 0 30px #ed1e1e, 0 0 40px #ed2424, 0 0 50px #f72e2e, 0 0 60px #f02b2b, 0 0 70px #ef2a2a, 0 0 80px #f43535, 0 1 90px #ed2020;
+  }
+}
+
+
+.card
+{
+    position: relative;
+    width: 500px;
+    height: 190px;  
+    background: black;
+   
+    transition: 0.5s;
+    
+}
+.card:hover
+{
+    height: 400px;
+}
+.card .lines
+{
+    position: absolute;
+    inset: 0;
+    background: rgb(210, 196, 196);
+    overflow: hidden;
+    
+}
+.card .lines::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate( -50%, -50% );
+    width: 600px;
+    height: 120px;
+    background: linear-gradient(transparent,#d5321d,#d5321d,#d5321d,transparent);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%
+    {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+}
+.card .lines::after
+{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+.card .imgBx
+{
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #000;
+    transition: 0.5s;
+    z-index: 10;
+    overflow: hidden; 
+}
+.card:hover .imgBx
+{
+    width: 200px;
+    height: 200px;
+}
+.card .imgBx::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(transparent,white,white,white,transparent);
+    animation: animate2 6s linear infinite;
+}
+@keyframes animate2
+{
+    0%
+    {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100%
+    {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+.card .imgBx::after
+{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+.card .imgBx img
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    /*filter: grayscale(1);*/
+}
+.card .content
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.card .content .details
+{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(145px);
+}
+.card:hover .content .details
+{
+    transform: translateY(0px);
+
+}
+.card .content .details h2
+{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #f64f32;
+    line-height: 1.2em;
+    margin-bottom: 70px;
+}
+.card .content .details h2 span
+{
+    font-size: 0.75em;
+    font-weight: 500;
+    color: #fff;
+}
+.card .content .details .data
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.card .content .details .data h3
+{
+    font-size: 1em;
+    color: #f64f32;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+.card .content .details .data h3 span
+{
+    font-size: 0.85em;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 30px;
+}
+.card .content .details .actionBtn
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.card .content .details .actionBtn button
+{
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    background: #45f3ff;
+    color: #222;
+    cursor: pointer;
+    opacity: 0.9;
+}
+.card .content .details .actionBtn button:nth-child(2)
+{
+    background: #fff;
+}
+.card .content .details .actionBtn button:hover
+{
+    opacity: 1;
+}
+
+
+

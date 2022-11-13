@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:wght@300;400;500;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu',sans-serif;
+}
+body {
+  min-height: 100vh;
+  background:black;
+}
+
+.float-container{
+	height: 700px;
+	width: 1000px;
+	display: inline;
+  margin-top: 100px;
+  margin-left: 400px;
+ 
+	
+}
+.float-child1{
+  float: right;
+  margin-right: 230px;
+  margin-top: 40px;
+  border-radius: 10px;
+  
+  width: 1000px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  box-shadow: 0 0 8px 0 rgb(234, 13, 13);
+  
+  
+  height: 650px;
+ 
+  
+
+}
+.float-child2{
+  float: left;
+  margin-left: 350px;
+  width: 250px;
+ margin-top: 250px;
+}
+.float-child2 h1{
+	font-size: 50px;
+  text-align: center;
+   font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+     from {
+      color: #fff;
+    text-shadow: 0 0 10px #ed4828, 0 0 20px #ed4828, 0 0 30px #ed4828, 0 0 40px #ed4828, 0 0 50px #ed4828, 0 0 60px #ed4828, 0 0 70px #ed4828, 0 0 90px #ed4828;
+  }
+  
+  to {
+     color: gray;
+    text-shadow: 0 0 20px #e92424, 0 0 30px #ed1e1e, 0 0 40px #ed2424, 0 0 50px #f72e2e, 0 0 60px #f02b2b, 0 0 70px #ef2a2a, 0 0 80px #f43535, 0 1 90px #ed2020;
+  }
+}
+.card
+{
+    position: relative;
+    width: 700px;
+    height: 190px;  
+    background: black;
+    box-shadow: 0 0 8px 0 rgb(255, 251, 251);
+    border-radius: 10px;
+   
+    transition: 0.5s;
+    margin-top: 25px;
+    margin-left: 150px;
+    
+}
+.card:hover
+{
+    height: 400px;
+}
+.card .lines
+{
+    position: absolute;
+    inset: 0;
+    background: rgb(210, 196, 196);
+    overflow: hidden;
+    border-radius: 10px;
+   
+}
+.card .lines::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate( -50%, -50% );
+    width: 600px;
+    height: 120px;
+    background: linear-gradient(transparent,#d5321d,#d5321d,#d5321d,transparent);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%
+    {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+}
+.card .lines::after
+{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: black;
+    border-radius: 10px;
+    
+}
+.card .content
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.card .content .details
+{
+    padding: 40px;
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(145px);
+}
+.card:hover .content .details
+{
+    transform: translateY(0px);
+    margin-bottom: 40px;
+
+}
+.card .content .details h2
+{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #f64f32;
+    line-height: 1.2em;
+    margin-bottom: 40px;
+}
+.card .content .details h2 span
+{
+    font-size: 0.75em;
+    font-weight: 500;
+    color: #fff;
+}
+.card .content .details .data .ul
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.card .content .details .data .ul  h3
+{
+    font-size: 1em;
+    color: #f64f32;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+.card .content .details .data h3 span
+{
+    font-size: 0.85em;
+    font-weight: 400;
+    color: #fff;
+    
+}
+.card .content .details .actionBtn
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.card .content .details .actionBtn button
+{
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    background: #45f3ff;
+    color: #222;
+    cursor: pointer;
+    opacity: 0.9;
+}
+.card .content .details .actionBtn button:nth-child(2)
+{
+    background: #fff;
+}
+.card .content .details .actionBtn button:hover
+{
+    opacity: 1;
+}
+
+
+
+
+
